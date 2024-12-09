@@ -1,0 +1,246 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.title {
+    font-size: 3rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+.msg {
+    font-size: 1.6rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    color: grey;
+}
+
+.msg2 {
+    font-size: 2rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    color: black;
+}
+
+.input-box {
+    width: 25rem;
+    height: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.input-box2 {
+    width: 14.8rem;
+    height: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.etc-btn {
+    margin: 1rem;
+}
+
+.btn.btn-large {
+    font-size: 1.2rem;
+    width: 25.4rem;
+    height: 4rem;
+    margin-top: 1rem;
+    padding: 0 5rem;
+    line-height: 2.7142857143rem;
+    margin-bottom: 10rem;
+}
+
+input[type="radio"] {
+    display: inline-block;
+    margin: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.empty-ban {
+    background: #071d3d;
+    height: 10rem;
+}
+
+.rect {
+    height: 11rem;
+    padding-top: 3rem;
+    display: flex;
+    background: #fff;
+    margin-top: -5rem;
+    box-shadow: 1px 1.7px 29px 0 rgba(7, 29, 61, 0.1);
+}
+.mgn-sm {
+    margin: 1.6rem;
+}
+.mgn-md {
+    margin: 2.5rem;
+}
+.mgn-top-md {
+    margin-top: 2.5rem;
+}
+.mgn-top-sm {
+    margin-top: 1.5rem;
+}
+.mgn-lf-md {
+    margin-left: 3rem;
+}
+.mgn-bt-sm {
+    margin-bottom: 1rem;
+}
+.mgn-bt-xs {
+    margin-bottom: 0.7rem;
+}
+
+.pad-sm {
+    padding: 1.8rem;
+}
+.pad-top-lg {
+    padding-top: 3.5rem;
+}
+.pad-top-md {
+    padding-top: 2.5rem;
+}
+
+.wth-12p {
+    width: 12%;
+}
+.wth-20p {
+    width: 20%;
+}
+.wth-40p {
+    width: 40%;
+}
+
+.left {
+    text-align: left;
+}
+
+.ft-lg {
+    font-size: 3rem;
+}
+
+.ft-md {
+    font-size: 2rem;
+}
+
+.ft-sm {
+    font-size: 1.5rem;
+}
+
+.ft-xs {
+    font-size: 1rem;
+}
+
+.color-gray {
+    color: grey;
+}
+.color-gold {
+    color: #c7a079;
+}
+
+.ico-ticket {
+    background-image: url("../images/icon/ic-ticket@3x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+.ico-coupon {
+    background-image: url("../images/icon/ic-coupon@3x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+.ico-point {
+    background-image: url("../images/icon/ic-point@3x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+.ico-checkin {
+    background-image: url("../images/icon/ic-checkin@3x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+.ico-ncpay {
+    background-image: url("../images/icon/ic-nc-pay@3x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+.ico-shop {
+    background-image: url("../images/icon/ic-my-shop-checking@3x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+.ico-event {
+    background-image: url("../images/icon/ic-event-checking@3x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+.ico-question {
+    background-image: url("../images/icon/ic-question@3x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+.ico-question02 {
+    background-image: url("../images/icon/ico-question2@3x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+.ico-see {
+    background-image: url("../images/icon/ic-see@3x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+.align-hori {
+    display: flex;
+}
+.justify-center {
+    justify-content: center;
+}
+.hght-md {
+    height: 5rem;
+}
+
+.temp-ban {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 10rem;
+    background-image: url("../images/img-my-banner_2023_ticket_open.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+
+.tbl>thead>tr {
+    background-color: #e0e0e0;
+    height: 4rem;
+    padding-top: 1rem;
+}
+
+.tbl>thead>tr>th {
+    padding-top: 1.2rem;
+    color: #747474;
+}
+
+input[type="checkbox"] {
+    display: inline;
+}
+
+.pop {
+    background-color: white;
+}
+.pop>.contents {
+    overflow: scroll;
+    height: 500px;
+}
+
