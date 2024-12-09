@@ -19,6 +19,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import jwt.JwtLogin;
 import org.iclass.controller.Controller;
 import org.iclass.service.MemberService;
 import org.iclass.vo.DemoMember;
@@ -42,7 +43,14 @@ implements Controller {
         String url = request.getContextPath();
         if (user != null) {
             session.setAttribute("user", (Object)user);
-            url = request.getContextPath();
+            HttpServletRequest httpRequest = request;
+            HttpServletResponse httpResponse = response;
+            JwtLogin.jwtToken(id, response, request);
+            String accessToken = (String)session.getAttribute("accessToken");
+            String refreshToken = (String)session.getAttribute("refreshToken");
+            System.out.println(session.getAttribute("accessToken"));
+            System.out.println(session.getAttribute("refreshToken"));
+            url = "token.jsp";
         } else {
             Cookie cookie = new Cookie("incorrect", "y");
             cookie.setPath("/");

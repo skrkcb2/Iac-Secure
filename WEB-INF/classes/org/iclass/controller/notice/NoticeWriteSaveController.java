@@ -32,7 +32,7 @@ implements Controller {
     @Override
     public void handle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
-        String path = request.getServletContext().getRealPath("/") + "upload";
+        String path = "/opt/tomcat/upload/";
         int maxSize = 0x1E00000;
         MultipartRequest multiRequest = new MultipartRequest(request, path, maxSize, "UTF-8", (FileRenamePolicy)new DateFileRenamePolicy());
         String attachfile = multiRequest.getOriginalFileName("attachfile");

@@ -19,10 +19,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.iclass.controller.Controller;
 
-public class NoticeFileDownloadController implements Controller {
+public class NoticeFileDownloadController
+implements Controller {
     @Override
     public void handle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String filePath = request.getServletContext().getRealPath("/") + "upload";
+        String filePath = "/opt/tomcat/upload/";
         String fileName = request.getParameter("uploadfile");
         String originfile = request.getParameter("attachfile");
         if (fileName == null) {

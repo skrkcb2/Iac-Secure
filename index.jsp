@@ -24,6 +24,7 @@
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
+
 <script>
 	/* 로그인 후 글쓰기로 돌아가기 */
 	var back = sessionStorage.getItem('back');
@@ -32,6 +33,7 @@
 		sessionStorage.removeItem('back');
 	}
 </script>
+
 			<!-- Header -->
 			<%@ include file="./layout/header.jsp" %>
 
@@ -193,8 +195,10 @@
 				</div>
 
 		</div>
-		
+
+</script> 
 		<!-- Scripts -->
+			<script src="assets/js/jwt.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>

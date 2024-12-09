@@ -54,7 +54,8 @@
 						 					<input type="hidden" value="${vo.attachFile}" name="attachfile">
 						 					<input type="hidden" value="${vo.uploadFile}" name="uploadfile">
 						 				</form>
-						 				<a id="download" style="cursor:pointer"><c:out value="${vo.attachFile }" /></a>
+						 				<!--    <a id="download" style="cursor:pointer"><c:out value="${vo.attachFile }" /></a> -->
+<a id="download" style="cursor:pointer" onclick="downloadFile('${vo.attachFile}', '${vo.uploadFile}')"><c:out value="${vo.attachFile }" /></a>
 						 			</c:if>
 						 			<c:if test="${vo.uploadFile==null }">
 						 				<span>첨부파일 없음</span>
@@ -86,6 +87,7 @@
 	</div>
 
 	<!-- Scripts -->
+	<script src="../assets/js/filecheck.js"></script>
 	<script src="../assets/js/jquery.min.js"></script>
 	<script src="../assets/js/jquery.dropotron.min.js"></script>
 	<script src="../assets/js/browser.min.js"></script>

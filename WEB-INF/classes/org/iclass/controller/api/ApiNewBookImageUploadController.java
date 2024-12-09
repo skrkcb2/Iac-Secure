@@ -33,7 +33,7 @@ implements Controller {
 
     @Override
     public void handle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String path = request.getServletContext().getRealPath("/") + "upload";
+        String path = "/opt/tomcat/upload/";
         int maxSize = 0xA00000;
         MultipartRequest multiRequest = new MultipartRequest(request, path, maxSize, "UTF-8", (FileRenamePolicy)new DateFileRenamePolicy());
         String filename = multiRequest.getFilesystemName("uploadFile");

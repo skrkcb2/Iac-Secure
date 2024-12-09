@@ -32,7 +32,8 @@ request객체의 contextPath를 el로 접근할 때에는 현재 jsp 객체 page
 			 	<tr>
 			 	<!-- 사용자가 선택 이미지 파일이 서버에 업로드 되도록합니다. form 태그의 enctype 속성-->
 					<th><label>책 커버<br>(대표 이미지)</label></th>
-			 		<td><input type="file" name="coverfile" accept="image/*">
+			 		<!-- <td><input type="file" name="coverfile" accept="image/*"> -->
+			 		<td><input type="file" name="coverfile" id="coverfile" accept=".jpg, .jpeg, .png" onchange="validateFile()">
 			 		<!-- <input type="file" name="coverfile" accept="image/*"> -->
 			 		<!-- 웹에서 파일형식 MIME 으로 설정. 이미지 파일 선택 accept 속성 설정 
 			 		 파일 선택 대화상자에 모든파일이 있으므로 추가로 자바스크립트에서 확장자 체크하는 함수 필요합니다.
@@ -63,6 +64,7 @@ request객체의 contextPath를 el로 접근할 때에는 현재 jsp 객체 page
 			 </section>
 			 <div data-num="2" id="datanum"></div>
 	</div>		 
+			<script src="../assets/js/filecheck.js"></script>
 			<script src="../assets/js/jquery.min.js"></script>
 			<script src="../assets/js/jquery.dropotron.min.js"></script>
 				<script src="../assets/js/browser.min.js"></script>

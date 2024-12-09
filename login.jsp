@@ -26,7 +26,8 @@
 				<div class="login">
 				  <h2>회원 로그인</h2>
 				  <label id="incorrect">계정 정보가 일치하지 않습니다.</label>
-				  <form action="login" method="post">
+		
+				  <form  action="login" method="post">
 				    <div class="mb-3">
 				      <label for="userid">아이디:</label>
 				      <input class="form-control" id="userid" placeholder="Enter id" type="text" name="userid" required>
@@ -41,9 +42,11 @@
 				        <input class="form-check-input" type="checkbox" name="remember"> Remember me
 				      </label>
 				    </div>
-				    <button class="btn btn-primary">로그인</button>
+<!-- 				    <button class="btn btn-primary">로그인</button> -->
+				    <button class="" onclick="doSubmit()">로그인</button>
 				  <%--   <button type="button" class="btn btn-primary" 
 				    		onclick="location.href='${pageContext.request.contextPath}'">HOME</button> --%>
+				    		
 				  </form>
 				  <hr>
 				  <a href="join" class="f-sm">아직 회원이 아니시면 회원 가입을 해주세요.</a><br>
@@ -51,7 +54,8 @@
 				</div>
 		</div>
 </div>
-<script>
+
+ <script>
 	/* 쿠키에 저장된 로그인 실패 정보 확인 */
 	console.log('${cookie.incorrect}')
 	if('${cookie.incorrect.value}'==='y') {
@@ -60,14 +64,34 @@
 		document.cookie = 'incorrect' + "=; expires=Thu, 01 Jan 1970 00:00:10 GMT; path=/;";
 	}
 	console.log('incorrect','${cookie.incorrect.value}')
+</script> 
+
+<script>
+    /* 쿠키에 저장된 토큰 정보 확인 */
+    console.log(document.cookie);
+
+    // 토큰을 가져오는 함수
+    function getToken(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
 </script>
+
   		<!-- Scripts -->
+  		
+ 
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+
+			
+
 </body>
 </html>
 <!-- 계정 : wonder, minkr, chchch  패스워드 : thGH123!@4 -->

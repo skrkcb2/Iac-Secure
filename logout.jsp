@@ -8,9 +8,18 @@
 		<title>커피24 북카페</title>
 </head>
 <body>
+	<script src="assets/js/jwt.js"></script>
 	<script type="text/javascript">
-		alert('로그아웃 되었습니다.')
-		location.href='${pageContext.request.contextPath}'
+		window.onload = function() {
+			alert('로그아웃 되었습니다.');
+			deleteTokens();
+			<% session.invalidate(); %>;
+			location.href='${pageContext.request.contextPath}';
+		}
 	</script>
+
+
 </body>
 </html>
+
+

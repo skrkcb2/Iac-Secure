@@ -36,7 +36,7 @@
 		//var yn = '${param.adultYn}'  /* 14세미만 보호자개인정보 제공은 본인 인증 api 에 따라 추가 코드 작성시 사용 */
 		var message = {successYn : 'Y'};
 		message = JSON.stringify(message)
-		var targetOrigin = '*'; // 부모 창의 origin
+		var targetOrigin = 'http://localhost:8083/DemoProj/join'; // 부모 창의 origin
 		window.opener.postMessage(message, targetOrigin);
 		
 		self.close();

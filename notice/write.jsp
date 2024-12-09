@@ -20,7 +20,7 @@ request객체의 contextPath를 el로 접근할 때에는 현재 jsp 객체 page
 			 		<td><input type="text" name="title" size="50" required></td>
 			 	</tr>
 			 	<tr><th><label>첨부파일</label></th>
-			 		<td><input type="file" name="attachfile"></td>
+			 		<td><input type="file" name="attachfile" id="attachfile" onchange="validateFileAdmin()"></td>
 			 	</tr>
 			 	<tr><th><label>내용</label></th>  <!-- textarea 의 크기 : rows="30" 는 행 크기, cols="80"은 열  크기 -->
 			 		<td><textarea  rows="30" cols="80" name="content" style="resize:none;"  required></textarea>
@@ -35,5 +35,6 @@ request객체의 contextPath를 el로 접근할 때에는 현재 jsp 객체 page
 			 </table>
 			 </form>
 			 </main>
+			 <script src="../assets/js/filecheck.js"></script>
 </body>
 </html>

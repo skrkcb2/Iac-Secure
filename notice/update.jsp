@@ -59,7 +59,7 @@
  	<tr>
  	<td colspan="2" align="center">
 	 	<button type="submit">저장</button>
-	 	<button type="reset">다시쓰기</button>
+<!-- 	 	<button type="reset">다시쓰기</button> -->
 	 	<button type="button" onclick="golist()">목록</button>  <!-- 현재페이지 번호 전달 - 순서5) -->
  	</td>
  	</tr>
@@ -73,14 +73,24 @@
 			<input type="hidden" value='${vo.attachFile }' name="attachFile">
 			<button id="remove"><i class="fa-solid fa-circle-xmark" id="remove"></i>삭제</button>
 			`
-	document.querySelector("#remove").addEventListener('click',function(){
-		 const inputFile = document.createElement('input');
-		 inputFile.type = 'file';
-  	     inputFile.name = 'attachfile';
-  	     
-  	   	 document.querySelector("#attach").innerHTML='';
-  	   	 document.querySelector("#attach").appendChild(inputFile);
-	})
+	
+       document.querySelector("#remove").addEventListener('click',function(){
+                 const inputFile = document.createElement('input');
+                 inputFile.type = 'file';
+             inputFile.name = 'attachfile';
+             inputFile.id = 'attachfile';
+
+                 document.querySelector("#attach").innerHTML='';
+                 document.querySelector("#attach").appendChild(inputFile);
+
+const attachFileInput = inputFile;
+if (attachFileInput) {
+    attachFileInput.addEventListener('change', function() {
+        console.log("validate");
+        validateFileAdmin();
+    });
+}
+        })
 	
 	function onReset(event){
 			const status = '${vo.attachFile }'
@@ -97,5 +107,6 @@
 				location.href=url
   }/* location.href='list?page=${paging.currentPage}&findText=${paging.findText }&column=${paging.column }' */
 </script>
+<script src="../assets/js/filecheck.js"></script>
 </body>
 </html>
